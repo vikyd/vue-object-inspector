@@ -30,7 +30,7 @@ In Vue component:
 </template>
 
 <script>
-import ObjectInpsector from 'vue-object-inspector'
+import ObjectInspector from 'vue-object-inspector'
 
 export default {
   name: 'your-component',

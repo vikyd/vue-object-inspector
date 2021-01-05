@@ -1,6 +1,23 @@
 {
   "name": "vue-object-inspector",
-  "version": "0.1.0",
+  "version": "1.0.3",
+  "keywords": [
+    "vue",
+    "object",
+    "chrome",
+    "devtools",
+    "component",
+    "inspector",
+    "object-inspector",
+    "object-viewer",
+    "array",
+    "array-viewer",
+    "tree",
+    "tree-view",
+    "treeview",
+    "ui",
+    "view"
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/index.js",
@@ -8,7 +25,7 @@
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
-  "main": "src/index.js",
+  "main": "dist/vue-object-inspector.umd.js",
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"

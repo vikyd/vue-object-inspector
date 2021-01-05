@@ -8,4 +8,5 @@ module.exports = {
       filename: 'index.html',
     },
   },
+  css: { extract: false },
 }
