@@ -12,6 +12,8 @@ Online Playground: https://codesandbox.io/s/vue-object-inspector-demo-gjs9h?file
 
 ![](https://raw.githubusercontent.com/vikyd/repos-bigfile/main/vue-object-inspector/object.png)
 
+![](https://raw.githubusercontent.com/vikyd/repos-bigfile/main/vue-object-inspector/chromedark.png)
+
 ![](https://raw.githubusercontent.com/vikyd/repos-bigfile/main/vue-object-inspector/array.png)
 
 ![](https://raw.githubusercontent.com/vikyd/repos-bigfile/main/vue-object-inspector/json.png)
