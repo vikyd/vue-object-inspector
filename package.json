@@ -1,6 +1,7 @@
 {
   "name": "vue-object-inspector",
-  "version": "1.0.4",
+  "version": "1.0.5",
+  "description": "Vue component used as an js/json object inspector/viewer",
   "keywords": [
     "vue",
     "object",
@@ -18,6 +19,11 @@
     "ui",
     "view"
   ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vikyd/vue-object-inspector.git"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib src/index.js",
