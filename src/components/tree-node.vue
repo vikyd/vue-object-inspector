@@ -10,7 +10,7 @@
       >
         ▶ </span
       ><span
-        v-else-if="shouldShowPlaceholder || $slots.default"
+        v-else-if="shouldShowPlaceholder && $slots.default"
         class="tree-node-placeholder"
         >&nbsp;</span
       ><node-renderer />
