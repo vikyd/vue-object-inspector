@@ -151,6 +151,14 @@ This component supports some Vue props, similar to [react-inspector](https://git
 - mandatory: false
 - default: `10`
 
+### `theme`
+
+- what: use light or dark theme
+- type: String
+- mandatory: false
+- default: light theme, keep this prop empty
+- dark theme value: `chromeDark`
+
 ## Development
 
 Local preview page is [example/App.vue](example/App.vue) .

@@ -1,5 +1,10 @@
 <template>
-  <div class="vue-object-inspector">
+  <div
+    :class="[
+      'vue-object-inspector',
+      theme === 'chromeDark' ? 'vue-object-inspector-chromedark' : '',
+    ]"
+  >
     <tree-view
       v-bind="$attrs"
       :dataIterator="dataIterator"
@@ -32,6 +37,10 @@ export default {
   },
   // inheritAttrs: false,
   props: {
+    theme: {
+      type: String,
+      default: '',
+    },
     data: null,
     // expandLevel: {
     //   type: Number,

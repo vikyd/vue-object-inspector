@@ -1,5 +1,5 @@
 <template>
-  <span :class="calcObject.class"
+  <span :class="['object-value', calcObject.class]"
     >{{ calcObject.text
     }}<template v-if="type === 'function'"
       ><span class="object-value-function-prefix">ƒ&nbsp;</span

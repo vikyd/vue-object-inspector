@@ -4,6 +4,7 @@ module.exports = {
     '../stories/stories-array.js',
     '../stories/stories-maps-sets-functions.js',
     '../stories/stories-basic-type.js',
+    '../stories/stories-themes.js',
   ],
   addons: [
     // "@storybook/addon-links",
