@@ -6,7 +6,11 @@ Vue component used as an js/json object inspector/viewer, inspired by [react-ins
 
 ## Online Playground
 
-Online Playground: https://codesandbox.io/s/vue-object-inspector-demo-gjs9h?file=/src/components/InspectorDemo.vue
+Online Playground:
+
+https://codesandbox.io/s/vue-object-inspector-demo-gjs9h?file=/src/components/InspectorDemo.vue
+
+https://codesandbox.io/s/vue-object-inspector-demo-dark-bouxd?file=/src/components/InspectorDemo.vue
 
 ## Examples
 

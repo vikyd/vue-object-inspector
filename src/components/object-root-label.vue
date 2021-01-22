@@ -1,5 +1,5 @@
 <template>
-  <span>
+  <span class="object-root-label">
     <span v-if="typeof name === 'string'">
       <span class="object-name">{{ name }}</span>
       <span>: </span>

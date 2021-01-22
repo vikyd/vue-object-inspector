@@ -1,5 +1,5 @@
 <template>
-  <span
+  <span class="object-label"
     ><span
       v-if="typeof name === 'string'"
       :class="['object-name', isNonenumerable ? 'object-name-dimmed' : '']"
