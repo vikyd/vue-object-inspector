@@ -3,11 +3,14 @@
     <h1>Vue Object Inspector - Example Page</h1>
     <div class="tips">
       <p>More examples: run storybook localy, see README.md</p>
+      <button @click="onClick">Expand All</button>
+      <button @click="onClickFold">Collapse All</button>
+      <button @click="onClickPaths">Expand to path</button>
     </div>
     <object-inspector
       :data="data"
-      :expandLevel="0"
-      :expandPaths="['$.*.*']"
+      :expandLevel="expandLevel"
+      :expandPaths="expandPaths"
       class="content"
     />
     <!-- :objectMaxProperties="2"
@@ -29,6 +32,8 @@ export default {
   },
   data() {
     return {
+      expandLevel: 1,
+      expandPaths: ['*.a'],
       dataArr: [
         1,
         2,
@@ -76,6 +81,18 @@ export default {
     }
   },
   methods: {
+    onClickPaths() {
+      this.expandPaths = ['$.a.arr']
+    },
+    onClickFold() {
+      this.expandLevel = -1
+      this.$nextTick(() => {
+        this.expandLevel = 0
+      })
+    },
+    onClick() {
+      this.expandLevel = 5
+    },
     sortFunc(a, b) {
       return b > a ? 1 : -1
     },

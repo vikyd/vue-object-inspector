@@ -54,26 +54,55 @@ export default {
       expandedPaths: {},
     }
   },
+  watch: {
+    expandLevel() {
+      this.calcExpandLevel()
+    },
+    expandPaths() {
+      this.calcExpandPaths()
+    },
+  },
   beforeMount() {
-    let paths = []
-    if (this.expandPaths) {
-      this.expandPaths.forEach((path) => {
-        const arr = path.split('.')
-        arr.forEach((part, index) => {
-          paths.push(arr.slice(0, index + 1).join('.'))
-        })
-      })
-    }
-    this.expandedPaths = getExpandedPaths(
-      this.data,
-      this.dataIterator,
-      paths,
-      this.expandLevel,
-      {}
-    )
+    this.reCalcExpandPaths()
   },
   mounted() {},
   methods: {
+    reCalcExpandPaths() {
+      let paths = this.calcExpandPaths()
+      this.calcExpandLevel(paths)
+    },
+    calcExpandPaths() {
+      let paths = []
+      if (this.expandPaths) {
+        this.expandPaths.forEach((path) => {
+          const arr = path.split('.')
+          arr.forEach((part, index) => {
+            paths.push(arr.slice(0, index + 1).join('.'))
+          })
+        })
+      }
+      this.expandedPaths = getExpandedPaths(
+        this.data,
+        this.dataIterator,
+        paths,
+        0,
+        {}
+      )
+
+      return paths
+    },
+    calcExpandLevel(paths) {
+      if (!paths) {
+        paths = []
+      }
+      this.expandedPaths = getExpandedPaths(
+        this.data,
+        this.dataIterator,
+        paths,
+        this.expandLevel,
+        {}
+      )
+    },
     onExpandedPathsChange(data) {
       this.$set(this.expandedPaths, data.path, data.val)
     },

@@ -101,6 +101,20 @@ This component supports some Vue props, similar to [react-inspector](https://git
   - `['$.*']`: wildcard, expand all level 2 nodes, equivalent to `:expandLevel="2"`
   - `['$.*.*']`: wildcard, expand all level 3 nodes, equivalent to `:expandLevel="3"`
 
+### `expandPaths` vs `expandPaths`
+
+Both are reactive.
+
+In most case, don't use both at the same time.
+
+One of them changes, only the changed one will take effect and ignore the other one.
+
+If want to expand all level, change `expandLevel` to a very big number.
+
+If want to collapse all level, change `expandLevel` to 0.
+
+If already change expand by hand, change the `expandLevel` to a nagative number, then change it back in `$nextTick`.
+
 ### `showNonenumerable`
 
 - what: show non-enumerable properties, like `__proto__`, `length`, `constructor` ...
