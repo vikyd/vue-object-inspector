@@ -1,5 +1,7 @@
 <template>
-  <span :class="['object-value', calcObject.class]"
+  <span
+    :class="['object-value', calcObject.class]"
+    :title="type === 'string' ? calcObject.noQouteText : calcObject.text"
     >{{ calcObject.text
     }}<template v-if="type === 'function'"
       ><span class="object-value-function-prefix">ƒ&nbsp;</span
@@ -35,6 +37,7 @@ export default {
           return {
             class: 'object-value-string',
             text: `"${o}"`,
+            noQouteText: `${o}`,
           }
         case 'boolean':
           return {

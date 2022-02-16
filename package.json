@@ -1,6 +1,6 @@
 {
   "name": "vue-object-inspector",
-  "version": "1.0.11",
+  "version": "1.0.2",
   "description": "Vue component used as an js/json object inspector/viewer",
   "keywords": [
     "vue",

@@ -55,6 +55,8 @@ export default {
         // symbolVal: Symbol('aaa'),
         number: 123,
         string: 'abc',
+        multiLine: `123\n
+456`,
         boolean: true,
         arr: [1, 2, 3, 4, 5],
         undef: undefined,
